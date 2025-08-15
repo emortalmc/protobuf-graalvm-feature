@@ -1,5 +1,5 @@
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.8.10"
+    id("org.jetbrains.kotlin.jvm") version "2.2.20-Beta2"
     `java-library`
     `maven-publish`
 }
@@ -10,8 +10,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly("org.graalvm.nativeimage:svm:23.1.0")
-    compileOnly("com.google.protobuf:protobuf-java:3.24.4")
+    compileOnly("org.graalvm.nativeimage:svm:24.2.2")
+    compileOnly("com.google.protobuf:protobuf-java:4.28.0")
     implementation("org.reflections:reflections:0.10.2")
 
 }
@@ -20,7 +20,7 @@ java {
     withJavadocJar()
     withSourcesJar()
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
 }
 
